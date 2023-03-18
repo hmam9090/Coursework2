@@ -42,8 +42,8 @@ public class Main {
             next_space++;
             System.out.println(Arrays.toString(NewList) + "  2 while");
         }
-
-
+        // Take the bigger element and put in NewList
+        // note that only one of the two loops below will be executed
         // copy any remaining entries of the second half
         while (element2 <= to) {
             NewList[next_space] = a[element2];
@@ -53,6 +53,10 @@ public class Main {
             System.out.println(Arrays.toString(NewList) + "  3 while");
         }
 
-    }
+        // copy back from the temporary array
+        for (next_space = 0; next_space < n; next_space++) {
+            a[from + next_space] = NewList[next_space];
+        }
+    }//ending merge
 
 }

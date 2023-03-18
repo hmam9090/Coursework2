@@ -17,5 +17,13 @@ public class Main {
 
     }// end mergeSort
 
+    public static void merging(String[] a, int from, int mid, int to) {
+        int n = to - from + 1;       // size of the range to be merged
+        String[] NewList = new String[n];   // merge both halves into a temporary array NewList
+        int elment1 = from;               // next element to consider in the first range
+        int element2 = mid + 1;            // next element to consider in the second range
+        int next_space = 0;                   // next open position in NewList
+
+    }
 
 }

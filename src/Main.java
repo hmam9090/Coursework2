@@ -35,6 +35,23 @@ public class Main {
             }
             next_space++;
         }
+        while (elment1 <= mid) {
+            NewList[next_space] = a[elment1];
+            System.out.println(NewList[next_space]);
+            elment1++;
+            next_space++;
+            System.out.println(Arrays.toString(NewList) + "  2 while");
+        }
+
+
+        // copy any remaining entries of the second half
+        while (element2 <= to) {
+            NewList[next_space] = a[element2];
+            System.out.println(NewList[next_space]);
+            element2++;
+            next_space++;
+            System.out.println(Arrays.toString(NewList) + "  3 while");
+        }
 
     }
 

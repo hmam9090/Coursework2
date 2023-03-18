@@ -24,6 +24,18 @@ public class Main {
         int element2 = mid + 1;            // next element to consider in the second range
         int next_space = 0;                   // next open position in NewList
 
+        // a loop that moves the smaller element to NewList as long as neither element1 nor element 2 past the end
+        while (elment1 <= mid && element2 <= to) {
+            if (a[elment1].compareTo(a[element2]) < 0) {
+                NewList[next_space] = a[elment1];
+                elment1++;
+            } else {
+                NewList[next_space] = a[element2];
+                element2++;
+            }
+            next_space++;
+        }
+
     }
 
 }

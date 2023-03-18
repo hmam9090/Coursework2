@@ -3,7 +3,8 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         String[] words = {"Dopey", "Doc", "Sleepy", "Happy", "Bashful", "Sneezy","Grumpy"};
-
+        mergeSort(words, 0, words.length - 1);
+        System.out.println(Arrays.toString(words));
     }
     public static void mergeSort(String[] a, int from, int to) {
         if (from == to) {
@@ -14,7 +15,7 @@ public class Main {
         mergeSort(a, from, mid);
         // sort the second half
         mergeSort(a, mid + 1, to);
-
+        merging(a, from, mid, to);
     }// end mergeSort
 
     public static void merging(String[] a, int from, int mid, int to) {

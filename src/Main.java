@@ -1,12 +1,19 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
-        String[] words = {"Dopey", "Doc", "Sleepy", "Happy", "Bashful", "Sneezy","Grumpy"};
-        mergeSort(words, 0, words.length - 1);
-        System.out.println(Arrays.toString(words));
+        String[] words = {"Dopey", "Doc", "Sleepy", "Happy", "Bashful", "Sneezy", "Grumpy"};
+        //mergeSort(words, 0, words.length - 1);
+        mergeSortWrapper(words);
+        System.out.println(String.join(",", words));
+    }
+    public static String[] mergeSortWrapper (String[]a){
+        mergeSort(a,0,a.length-1);
+        return a;
     }
     public static void mergeSort(String[] a, int from, int to) {
+        if (a.length == 0){
+            System.out.println("There are no words to be sorted.");
+            System.exit(0);
+        }
         if (from == to) {
             return;
         }
